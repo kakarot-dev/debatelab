@@ -1,3 +1,6 @@
 fastapi
 uvicorn
 llama-cpp-python
+pyautogen
+argparse
+colorama
