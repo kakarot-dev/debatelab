@@ -1,118 +1,25 @@
-2025-06-08 00:22:23,311 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 00:22:23,311 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 00:22:26,198 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 00:22:26,200 - src.debate_manager - INFO - Created 4 debate agents and 1 moderator
-2025-06-08 00:33:36,588 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 00:33:36,589 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 00:33:37,173 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 00:33:37,174 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 00:48:34,658 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 00:48:34,658 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 00:48:35,439 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 00:48:35,440 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 00:48:45,261 - src.agents - ERROR - Error generating reply for Alex the Optimist: 'system_message'
-2025-06-08 00:48:50,518 - src.agents - ERROR - Error generating reply for Sam the Skeptic: 'system_message'
-2025-06-08 00:48:55,779 - src.agents - ERROR - Error generating reply for Dr. Elena Ethics: 'system_message'
-2025-06-08 00:49:01,034 - src.agents - ERROR - Error generating reply for Dr. Elena Ethics: 'system_message'
-2025-06-08 00:49:04,287 - src.agents - ERROR - Error generating reply for Alex the Optimist: 'system_message'
-2025-06-08 00:49:07,545 - src.agents - ERROR - Error generating reply for Morgan the Moderator: 'system_message'
-2025-06-08 00:49:53,835 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 00:49:53,835 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 00:49:54,661 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 00:49:54,662 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 00:57:08,617 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 00:57:08,617 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 00:57:09,546 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 00:57:09,547 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 01:07:14,454 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 01:07:14,459 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 01:07:16,254 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 01:07:16,256 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 01:17:47,243 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 01:17:47,244 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 01:17:48,181 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 01:17:48,182 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 01:28:14,521 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 01:28:14,522 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 01:28:15,984 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 01:28:15,986 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 01:28:47,205 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-08 01:56:19,509 - src.llm_wrapper - ERROR - Error generating response: Requested tokens (4222) exceed context window of 4096
-2025-06-08 08:07:06,295 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 08:07:06,297 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 08:07:09,117 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 08:07:09,118 - src.debate_manager - INFO - Created 3 debate agents and 1 moderator
-2025-06-08 08:07:26,091 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-08 08:31:27,571 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 08:31:27,571 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 08:31:28,617 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 08:31:28,618 - src.debate_manager - INFO - Created 3 debate agents, 1 judge and 1 moderator
-2025-06-08 08:31:48,008 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-08 19:46:49,690 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 19:46:49,691 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 19:46:52,703 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 19:46:52,705 - src.debate_manager - INFO - Created 3 debate agents, 1 judge and 1 moderator
-2025-06-08 19:47:09,200 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-08 23:21:05,007 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-08 23:21:05,008 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-08 23:21:07,882 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-08 23:21:07,884 - src.debate_manager - INFO - Created 3 debate agents, 1 judge and 1 moderator
-2025-06-08 23:21:23,926 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-09 00:05:34,661 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 00:05:34,673 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 00:05:43,480 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 00:05:43,482 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 00:06:01,424 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
-2025-06-09 00:20:18,709 - src.debate_manager - ERROR - Error during debate: 'SummaryManager' object has no attribute 'get_detailed_summary'
-2025-06-09 10:36:28,878 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 10:36:28,885 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 10:36:37,399 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 10:36:37,401 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 10:37:06,831 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 10:37:06,831 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 10:37:08,418 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 10:37:08,419 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 10:37:26,561 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-09 11:11:05,937 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 11:11:05,937 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 11:11:07,532 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 11:11:07,533 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 11:11:29,114 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-09 11:21:09,512 - src.debate_manager - ERROR - Error in judge intervention: name 'exchange_num' is not defined
-2025-06-09 11:27:31,279 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 11:27:31,279 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 11:27:32,891 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 11:27:32,892 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 11:27:50,112 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-09 11:31:06,262 - src.debate_manager - ERROR - Error in judge intervention: name 'exchange_num' is not defined
-2025-06-09 11:32:19,506 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 11:32:19,507 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 11:32:21,114 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 11:32:21,115 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 11:32:40,259 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-09 11:49:47,432 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 11:49:47,433 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 11:49:50,023 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 11:49:50,024 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 11:50:06,406 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-09 14:59:57,293 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 14:59:57,304 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/tinyllama.gguf
-2025-06-09 14:59:57,460 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 14:59:57,461 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 15:00:08,570 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
-2025-06-09 15:05:59,886 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 15:05:59,887 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/tinyllama.gguf
-2025-06-09 15:06:00,039 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 15:06:00,039 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 15:06:12,770 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
-2025-06-09 15:10:54,499 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 15:10:54,499 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 15:10:56,823 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 15:10:56,824 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 15:11:15,155 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-09 19:24:14,075 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-09 19:24:14,086 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-09 19:24:16,448 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-09 19:24:16,449 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-09 19:24:34,499 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-09 19:56:26,876 - src.llm_wrapper - ERROR - Error generating response: Requested tokens (2068) exceed context window of 2048
+2025-06-11 21:52:45,897 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-11 21:52:45,897 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-11 21:52:46,467 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-11 21:52:46,468 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-11 21:53:05,601 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
+2025-06-11 22:17:59,429 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-11 22:17:59,430 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-11 22:17:59,991 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-11 22:17:59,992 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-11 22:18:22,486 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
+2025-06-11 22:34:53,145 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-11 22:34:53,146 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-11 22:34:53,688 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-11 22:34:53,689 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-11 22:35:11,564 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
+2025-06-11 23:03:24,029 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-11 23:03:24,029 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-11 23:03:24,578 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-11 23:03:24,579 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-11 23:03:45,082 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
+2025-06-11 23:18:13,189 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-11 23:18:13,189 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-11 23:18:13,698 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-11 23:18:13,699 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-11 23:18:28,403 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate

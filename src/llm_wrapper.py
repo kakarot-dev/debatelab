@@ -55,7 +55,7 @@ class LocalLLM:
             "top_p": self.config["top_p"],
             "top_k": self.config["top_k"],
             "repeat_penalty": self.config["repeat_penalty"],
-            "stop": ["\n\nHuman:", "\n\nAssistant:", "Human:", "Assistant:"],
+            "stop": ["<|human|>", "<|assistant|>", "<|system|>", "<|end|>"],
             **kwargs
         }
         
@@ -66,6 +66,7 @@ class LocalLLM:
             # Clean up any system artifacts or unwanted text
             # Only include patterns that are clearly meta-commentary or system artifacts
             unwanted_patterns = [
+                "<|system|>", "<|human|>", "<|assistant|>", "<|user|>", "<|end|>",
                 "System:", "Human:", "Assistant:", "User:",
                 "Agent Response:", "Agents Response:", "Agent's Response:",
                 "The agent responds:", "The character says:",
@@ -128,13 +129,13 @@ class LocalLLM:
             content = message.get("content", "")
             
             if role == "system":
-                prompt_parts.append(f"System: {content}")
+                prompt_parts.append(f"<|system|>\n{content}\n<|end|>")
             elif role == "user":
-                prompt_parts.append(f"Human: {content}")
+                prompt_parts.append(f"<|human|>\n{content}\n<|end|>")
             elif role == "assistant":
-                prompt_parts.append(f"Assistant: {content}")
+                prompt_parts.append(f"<|assistant|>\n{content}\n<|end|>")
         
-        prompt_parts.append("Assistant:")
+        prompt_parts.append("<|assistant|>")
         return "\n\n".join(prompt_parts)
     
     def is_available(self) -> bool:

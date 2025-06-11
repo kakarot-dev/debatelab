@@ -148,7 +148,7 @@ Detailed Summary:"""
         
         # Include brief summaries from current round
         if exchange_num in self.brief_summaries:
-            context_parts.append(f"Round {exchange_num} contributions:")
+            context_parts.append(f"Contributions:")
             for speaker, summary in self.brief_summaries[exchange_num].items():
                 context_parts.append(f"- {speaker}: {summary}")
         

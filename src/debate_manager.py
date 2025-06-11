@@ -5,7 +5,12 @@ import time
 from typing import List, Dict, Optional
 import logging
 from .agents import DebateAgentFactory, LocalLLMAgent
-from .config import DEBATE_CONFIG, COLORS
+from .config import (
+    DEBATE_CONFIG, COLORS,
+    get_initial_debate_message, get_starter_context_prompt, get_starter_selection_prompt,
+    get_final_evaluation_prompt, get_clarification_prompt, get_agent_context_instructions,
+    get_moderator_intervention_instructions
+)
 from .display import DebateDisplay
 from .summary_manager import SummaryManager
 from .interactive_judge import InteractiveJudge
@@ -87,12 +92,7 @@ class DebateManager:
         Returns:
             Initial message string
         """
-        return f"""Welcome to today's debate! Our topic is: "{self.topic}"
-
-Let's have a thoughtful discussion where each participant can share their perspective. 
-Remember to be respectful and build upon each other's ideas.
-
-Who would like to start with their opening thoughts?"""
+        return get_initial_debate_message(self.topic)
     
     def _run_natural_conversation(self, initial_message: str):
         """Run a natural conversation flow without rigid rounds.
@@ -116,6 +116,7 @@ Who would like to start with their opening thoughts?"""
         
         # Track conversation metrics
         total_exchanges = 0
+        current_exchange = 1  # Track current exchange/round number
         max_exchanges = DEBATE_CONFIG.get("max_exchanges", 20)  # Default to 20 exchanges
         min_exchanges = DEBATE_CONFIG.get("min_exchanges", 8)   # Default to 8 exchanges
         
@@ -131,13 +132,18 @@ Who would like to start with their opening thoughts?"""
                     self.display.show_message(current_speaker.name, response, current_speaker.personality["color"])
                     self.conversation_history.append({
                         "name": current_speaker.name,
-                        "content": response
+                        "content": response,
+                        "exchange": current_exchange
                     })
                     
                     total_exchanges += 1
                     
                     # Generate brief summary for this response
-                    self.summary_manager.update_brief_summary(current_speaker.name, response, total_exchanges)
+                    self.summary_manager.update_brief_summary(current_speaker.name, response, current_exchange)
+                    
+                    # Update exchange number every few exchanges to group related discussions
+                    if total_exchanges % 3 == 0:  # Group every 3 exchanges into one round
+                        current_exchange += 1
                     
                     # Check if judge intervention is needed
                     self._check_judge_intervention(current_speaker, response, total_exchanges)
@@ -166,6 +172,9 @@ Who would like to start with their opening thoughts?"""
                 logger.error(f"Error getting response from {current_speaker.name}: {e}")
                 current_speaker = self._select_next_speaker(debate_agents, current_speaker)
                 continue
+        
+        # Update summaries before final evaluation
+        self.summary_manager.update_summaries(self.conversation_history)
         
         # Final evaluation and summary
         self._provide_final_evaluation()
@@ -200,6 +209,10 @@ Who would like to start with their opening thoughts?"""
             if final_summary and final_summary != "No detailed summaries available yet.":
                 self.display.show_message("System", "\n📋 CONVERSATION SUMMARY:", "white")
                 self.display.show_message("System", final_summary, "white")
+            
+            # Show summary statistics
+            stats = self.summary_manager.get_summary_stats()
+            self.display.show_message("System", f"\n📊 Summary Statistics: {stats['exchanges_covered']} rounds covered, {stats['brief_summaries']} brief summaries, {stats['detailed_summaries']} detailed summaries", "white")
         
         # Judge's final evaluation if available
         if self.judge:
@@ -211,18 +224,12 @@ Who would like to start with their opening thoughts?"""
                 ]
                 
                 if participant_messages:
-                    evaluation_prompt = f"""As Judge Sophia, provide a final evaluation of this debate on: "{self.topic}"
-
-Please analyze:
-1. Overall quality of arguments presented
-2. How well participants engaged with each other's points
-3. Most compelling arguments made
-4. Areas where the discussion could have been stronger
-5. Key insights that emerged from the conversation
-
-Conversation included {len(participant_messages)} exchanges between the participants.
-
-Provide a thoughtful final assessment:"""
+                    # Get detailed context from summary manager
+                    detailed_context = self.get_summary_for_judge("detailed")
+                    
+                    evaluation_prompt = get_final_evaluation_prompt(
+                        self.topic, len(participant_messages), detailed_context
+                    )
 
                     success, final_evaluation = self.judge._custom_generate_reply(
                         messages=[{"content": evaluation_prompt, "name": "System"}],
@@ -245,15 +252,7 @@ Provide a thoughtful final assessment:"""
             The selected starter agent
         """
         # Ask the model which agent should start
-        starter_prompt = f"""Given the debate topic: "{self.topic}"
-
-Which of these debate personalities would be most appropriate to start the discussion?
-
-1. Alex the Optimist - Focuses on positive aspects, opportunities, and solutions
-2. Sam the Skeptic - Questions assumptions and examines potential problems  
-3. Dr. Elena Ethics - Examines moral implications, fairness, and justice
-
-Respond with just the number (1, 2, or 3) of the best starter."""
+        starter_prompt = get_starter_selection_prompt(self.topic)
 
         try:
             from .llm_wrapper import get_llm
@@ -321,50 +320,75 @@ Respond with just the number (1, 2, or 3) of the best starter."""
         Returns:
             Starter context message
         """
-        return f"""Topic: {self.topic}
- YOU ARE THE OPENING SPEAKER
-
-You have been selected as the best personality to start this debate. As the opening speaker, you have the important role of setting the foundation for the entire discussion.
-
-Your responsibilities as the opening speaker:
-- Present your opening perspective on this topic with detail
-- Set the tone for yourself to be always on the right path
-- Provide compelling arguments that will give other participants substantial material to respond to
-
-Remember to stay true to your personality while making compelling arguments that will spark meaningful discussion. This is your moment to shape the direction of the entire debate."""
+        return get_starter_context_prompt(self.topic)
     
     def _prepare_context_for_agent(self, agent: LocalLLMAgent) -> str:
-        """Prepare context message for an agent.
+        """Prepare context message for an agent using concise summaries.
         
         Args:
             agent: The agent
             
         Returns:
-            Context message
+            Context message with concise summary instead of full conversation
         """
         context_parts = [f"Topic: {self.topic}"]
-        context_parts.append(f"\n{agent.name} - IT'S YOUR TURN TO SPEAK")
         
-        # Give agents access to recent conversation history for better context
-        # Include last 6 messages or all if fewer to prevent context overflow
-        recent_history = self.conversation_history[-6:] if len(self.conversation_history) > 6 else self.conversation_history
+        # Always use summary context instead of full conversation history
+        if len(self.conversation_history) > 1:  # If there's any conversation to summarize
+            try:
+                current_exchange_round = max(
+                    (msg.get("exchange", 1) for msg in self.conversation_history
+                     if msg.get("name") != "System"),
+                    default=1
+                )
+                
+                # Get concise summary context
+                summary_context = self.summary_manager.get_context_for_judge("quick", current_exchange_round, self.conversation_history)
+                if summary_context and summary_context != "No context available.":
+                    context_parts.append(f"\nConversation summary:\n{summary_context}")
+                else:
+                    # Generate a brief summary of key points if no summary available
+                    context_parts.append(self._generate_brief_context_summary(agent))
+                    
+            except Exception as e:
+                logger.error(f"Error preparing summary context for {agent.name}: {e}")
+                # Fallback to brief summary
+                context_parts.append(self._generate_brief_context_summary(agent))
         
-        if recent_history:
-            context_parts.append("\nConversation so far:")
-            for msg in recent_history:
-                if msg["name"] != agent.name and msg["name"] != "System":  # Don't include agent's own messages or system messages
-                    content = msg['content']
-                    context_parts.append(f"{msg['name']}: {content}")
-        
-        context_parts.append(f"\nAs the current speaker, your role is to:")
-        context_parts.append("- Respond directly to the most compelling points made by other participants")
-        context_parts.append("- Present your unique perspective with detailed reasoning and examples")
-        context_parts.append("- Challenge weak arguments or build upon strong ones")
-        context_parts.append("- Advance the conversation with new insights or evidence")
-        context_parts.append("- Stay true to your personality while engaging meaningfully with the discussion")
-        context_parts.append(f"\nNow share your thoughts:")
-        
+        context_parts.append(get_agent_context_instructions())
         return "\n".join(context_parts)
+    
+    def _generate_brief_context_summary(self, agent: LocalLLMAgent) -> str:
+        """Generate a brief summary of the conversation context.
+        
+        Args:
+            agent: The current agent (to exclude their own messages)
+            
+        Returns:
+            Brief context summary
+        """
+        # Get recent non-system messages from other participants
+        other_messages = [
+            msg for msg in self.conversation_history[-6:]
+            if msg.get("name") != agent.name and msg.get("name") != "System"
+        ]
+        
+        if not other_messages:
+            return "\nNo previous discussion to summarize."
+        
+        # Create brief summary of key points
+        summary_parts = ["\nKey points from discussion:"]
+        for msg in other_messages[-3:]:  # Only last 3 messages from others
+            # Truncate long messages to key points
+            content = msg['content']
+            if len(content) > 150:
+                # Try to get the first sentence or key point
+                sentences = content.split('. ')
+                content = sentences[0] + '.' if sentences else content[:150] + "..."
+            summary_parts.append(f"- {msg['name']}: {content}")
+        
+        return "\n".join(summary_parts)
+    
     
     def _moderator_intervention(self, exchange_num: int):
         """Have the moderator intervene in the discussion.
@@ -407,16 +431,36 @@ Remember to stay true to your personality while making compelling arguments that
         context_parts = [
             f"Topic: {self.topic}",
             f"After {exchange_num} exchanges - Time for moderator intervention.",
-            "\nRecent discussion summary:"
         ]
         
-        # Summarize recent points
-        recent_messages = self.conversation_history[-5:] if len(self.conversation_history) > 5 else self.conversation_history
-        for msg in recent_messages:
-            if msg["name"] != "System" and msg["name"] != self.moderator.name:
-                context_parts.append(f"- {msg['name']}: {msg['content']}")
+        # Use summary manager to get appropriate context
+        try:
+            current_exchange_round = max(
+                (msg.get("exchange", 1) for msg in self.conversation_history
+                 if msg.get("name") != "System"),
+                default=1
+            )
+            
+            summary_context = self.summary_manager.get_context_for_judge("quick", current_exchange_round, self.conversation_history)
+            if summary_context and summary_context != "No context available.":
+                context_parts.append(f"\nDiscussion summary:\n{summary_context}")
+            else:
+                # Fallback to recent messages if no summary available
+                recent_messages = self.conversation_history[-5:] if len(self.conversation_history) > 5 else self.conversation_history
+                context_parts.append("\nRecent discussion:")
+                for msg in recent_messages:
+                    if msg["name"] != "System" and msg["name"] != self.moderator.name:
+                        context_parts.append(f"- {msg['name']}: {msg['content'][:100]}...")
+        except Exception as e:
+            logger.error(f"Error getting summary context for moderator: {e}")
+            # Fallback to recent messages
+            recent_messages = self.conversation_history[-5:] if len(self.conversation_history) > 5 else self.conversation_history
+            context_parts.append("\nRecent discussion:")
+            for msg in recent_messages:
+                if msg["name"] != "System" and msg["name"] != self.moderator.name:
+                    context_parts.append(f"- {msg['name']}: {msg['content'][:100]}...")
         
-        context_parts.append("\nPlease summarize key points and ask a follow-up question to drive the discussion forward.")
+        context_parts.append(f"\n{get_moderator_intervention_instructions()}")
         
         return "\n".join(context_parts)
     
@@ -463,13 +507,7 @@ Remember to stay true to your personality while making compelling arguments that
                 self.display.show_message("Judge Sophia", f"🤔 {question}", "blue")
                 
                 # Get clarification from speaker
-                clarification_prompt = f"""The judge has asked you a clarifying question about your recent argument:
-
-Your argument: {response}
-
-Judge's question: {question}
-
-Please provide a brief clarification that addresses the judge's concern while staying true to your personality."""
+                clarification_prompt = get_clarification_prompt(response, question)
 
                 try:
                     success, clarification = speaker._custom_generate_reply(
@@ -505,16 +543,71 @@ Please provide a brief clarification that addresses the judge's concern while st
             logger.error(f"Error in judge intervention: {e}")
 
     def get_debate_summary(self) -> Dict:
-        """Get a summary of the debate.
+        """Get a comprehensive summary of the debate.
         
         Returns:
-            Debate summary dictionary
+            Debate summary dictionary with detailed summaries
         """
+        # Update summaries to ensure they're current
+        self.summary_manager.update_summaries(self.conversation_history)
+        
         return {
             "topic": self.topic,
             "total_exchanges": len(self.conversation_history),
             "total_messages": len(self.conversation_history),
             "participants": [agent.name for agent in self.agents.values()],
             "moderator_used": self.moderator is not None,
-            "conversation_history": self.conversation_history
+            "conversation_history": self.conversation_history,
+            "detailed_summary": self.summary_manager.get_detailed_summary(),
+            "summary_stats": self.summary_manager.get_summary_stats()
         }
+    
+    def get_brief_summaries(self) -> Dict:
+        """Get brief summaries for all exchanges.
+        
+        Returns:
+            Dictionary of brief summaries by exchange and speaker
+        """
+        return self.summary_manager.brief_summaries
+    
+    def get_detailed_summaries(self) -> Dict:
+        """Get detailed summaries for all exchanges.
+        
+        Returns:
+            Dictionary of detailed summaries by exchange number
+        """
+        return self.summary_manager.detailed_summaries
+    
+    def get_summary_for_judge(self, decision_type: str = "detailed") -> str:
+        """Get appropriate summary context for judge decisions.
+        
+        Args:
+            decision_type: 'quick' for brief context, 'detailed' for comprehensive context
+            
+        Returns:
+            Formatted summary context
+        """
+        if not self.conversation_history:
+            return "No conversation history available."
+        
+        # Find the latest exchange number
+        latest_exchange = max(
+            (msg.get("exchange", 1) for msg in self.conversation_history
+             if msg.get("name") != "System"),
+            default=1
+        )
+        
+        return self.summary_manager.get_context_for_judge(
+            decision_type, latest_exchange, self.conversation_history
+        )
+    
+    def generate_exchange_summary(self, exchange_num: int) -> str:
+        """Generate a detailed summary for a specific exchange.
+        
+        Args:
+            exchange_num: The exchange number to summarize
+            
+        Returns:
+            Detailed summary of the specified exchange
+        """
+        return self.summary_manager.generate_detailed_summary(exchange_num, self.conversation_history)

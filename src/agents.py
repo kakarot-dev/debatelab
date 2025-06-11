@@ -23,7 +23,7 @@ class LocalLLMAgent(autogen.ConversableAgent):
         self.personality = AGENT_PERSONALITIES[personality_key]
         self.llm = get_llm()
         
-        combined_system_message = f"{BASE_DEBATE_PROMPT}\n\n{self.personality['personality']}"
+        combined_system_message = f"{self.personality['personality']}\n\n{BASE_DEBATE_PROMPT}"
         
         super().__init__(
             name=self.personality["name"],
@@ -117,7 +117,7 @@ class LocalLLMAgent(autogen.ConversableAgent):
         if response.startswith(f"{self.name}:"):
             response = response[len(f"{self.name}:"):].strip()
         
-        artifacts = ["Assistant:", "Human:", "System:", "\n\nHuman:", "\n\nAssistant:"]
+        artifacts = ["<|assistant|>", "<|human|>", "<|system|>", "<|user|>", "<|end|>", "Assistant:", "Human:", "System:", "\n\nHuman:", "\n\nAssistant:"]
         for artifact in artifacts:
             if response.startswith(artifact):
                 response = response[len(artifact):].strip()
