@@ -88,16 +88,14 @@ Summary:"""
             for msg in exchange_messages
         ])
         
-        prompt = f"""Create a comprehensive summary of this debate exchange, including:
-1. Main arguments presented by each participant
-2. Key evidence and examples used
-3. How participants engaged with each other's points
-4. Overall quality and direction of the discussion
+        prompt = f"""You are a professional summarizer. Provide concise, neutral summaries. Do not add facts that are not present in the input. Avoid labeling examples.
+1. The main arguments presented by each participant.
+2. How participants responded to each other's points.
+3. The overall quality and direction of the discussion.
 
-Exchange {exchange_num} Content:
+Exchange #{exchange_num}:
 {exchange_content}
-
-Detailed Summary:"""
+"""
 
         try:
             llm = self._get_llm()

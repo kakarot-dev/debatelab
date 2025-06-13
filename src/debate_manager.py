@@ -1,6 +1,4 @@
 """Debate manager for orchestrating group chat debates."""
-
-import random
 import time
 from typing import List, Dict, Optional
 import logging
@@ -226,7 +224,7 @@ class DebateManager:
                 if participant_messages:
                     # Get detailed context from summary manager
                     detailed_context = self.get_summary_for_judge("detailed")
-                    
+                    print(detailed_context)
                     evaluation_prompt = get_final_evaluation_prompt(
                         self.topic, len(participant_messages), detailed_context
                     )
@@ -292,7 +290,7 @@ class DebateManager:
         try:
             # Prepare context message
             if is_starter:
-                context_message = self._prepare_starter_context(agent)
+                context_message = self._prepare_starter_context()
             else:
                 context_message = self._prepare_context_for_agent(agent)
             
@@ -311,7 +309,7 @@ class DebateManager:
             logger.error(f"Error getting response from {agent.name}: {e}")
             return None
     
-    def _prepare_starter_context(self, agent: LocalLLMAgent) -> str:
+    def _prepare_starter_context(self) -> str:
         """Prepare a special starter context for the first speaker.
         
         Args:

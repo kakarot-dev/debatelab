@@ -21,13 +21,11 @@ MODEL_CONFIG = {
 BASE_DEBATE_PROMPT = """<|system|>
 Debate Protocol:
 • Speak fully in-character; no meta-commentary.
-• Respond in ~200–250 words (±20) max.
 • Name and address agents when critiquing.
 • Critique/correct others' mistakes or gaps.
 • Use evidence, examples & logic.
 • Stay focused and avoid repetition.
 • End with: <|end|>
-<|end|>
 """
 
 # Agent personalities and roles

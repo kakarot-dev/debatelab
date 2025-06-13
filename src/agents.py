@@ -5,6 +5,9 @@ from typing import Dict, Any, Optional, List
 import logging
 from .llm_wrapper import get_llm
 from .config import AGENT_PERSONALITIES, BASE_DEBATE_PROMPT, COLORS
+from .tools.tool_manager import get_tool_manager
+from .tools.builtin_tools.test_tool import TestTool
+from .tools.builtin_tools.web_search_tool import WebSearchTool
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +25,12 @@ class LocalLLMAgent(autogen.ConversableAgent):
         self.personality_key = personality_key
         self.personality = AGENT_PERSONALITIES[personality_key]
         self.llm = get_llm()
+        self.tool_manager = get_tool_manager()
         
+        # Initialize tools if not already done
+        self._initialize_tools()
+        
+        # Create system message with tool context
         combined_system_message = f"{self.personality['personality']}\n\n{BASE_DEBATE_PROMPT}"
         
         super().__init__(
@@ -61,8 +69,12 @@ class LocalLLMAgent(autogen.ConversableAgent):
             # Prepare the conversation context
             conversation_context = self._prepare_context(messages)
             
-            # Generate response using local LLM
-            response = self.llm.create_chat_completion(conversation_context)
+            # Generate response using local LLM with function calling
+            response = self.llm.create_chat_completion_with_tools(
+                conversation_context,
+                self.tool_manager,
+                max_tool_calls=2
+            )
             
             # Clean up the response
             response = self._clean_response(response)
@@ -151,6 +163,20 @@ class LocalLLMAgent(autogen.ConversableAgent):
     
     def get_color(self) -> str:
         return COLORS.get(self.personality["color"], COLORS["white"])
+    
+    def _initialize_tools(self):
+        """Initialize tools for the agent if not already done."""
+        if self.tool_manager.get_tool_count() == 0:
+            # Register the test tool
+            test_tool = TestTool()
+            self.tool_manager.register_tool(test_tool)
+            
+            # Register the web search tool
+            web_search_tool = WebSearchTool()
+            self.tool_manager.register_tool(web_search_tool)
+            
+            logger.info("Initialized tools for agents: test_tool, web_search")
+            print("🔧 [TOOLS] Registered tools: test_tool, web_search")
 
 class DebateAgentFactory:
     """Factory for creating debate agents."""

@@ -1,25 +1,176 @@
-2025-06-11 21:52:45,897 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-11 21:52:45,897 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-11 21:52:46,467 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-11 21:52:46,468 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-11 21:53:05,601 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-11 22:17:59,429 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-11 22:17:59,430 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-11 22:17:59,991 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-11 22:17:59,992 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-11 22:18:22,486 - src.debate_manager - INFO - Selected Dr. Elena Ethics to start the debate
-2025-06-11 22:34:53,145 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-11 22:34:53,146 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-11 22:34:53,688 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-11 22:34:53,689 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-11 22:35:11,564 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-11 23:03:24,029 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-11 23:03:24,029 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-11 23:03:24,578 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-11 23:03:24,579 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-11 23:03:45,082 - src.debate_manager - INFO - Selected Sam the Skeptic to start the debate
-2025-06-11 23:18:13,189 - src.debate_manager - INFO - Setting up debate agents...
-2025-06-11 23:18:13,189 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
-2025-06-11 23:18:13,698 - src.llm_wrapper - INFO - Model loaded successfully
-2025-06-11 23:18:13,699 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
-2025-06-11 23:18:28,403 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:42:56,192 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:44:55,615 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 13:44:55,616 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 13:44:56,164 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 13:44:56,164 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 13:44:56,164 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 13:44:56,164 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 13:44:56,165 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 13:45:11,205 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:46:56,271 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 13:46:56,271 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 13:46:56,511 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 13:46:56,511 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 13:46:56,511 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 13:46:56,511 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 13:46:56,512 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 13:47:12,230 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:47:55,399 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 13:47:55,400 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 13:47:55,969 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 13:47:55,969 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 13:47:55,969 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 13:47:55,969 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 13:47:55,970 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 13:48:10,804 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:53:56,590 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 13:53:56,590 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 13:53:57,024 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 13:53:57,024 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 13:53:57,025 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 13:53:57,025 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 13:53:57,026 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 13:54:13,135 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 13:56:54,235 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 13:56:54,235 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 13:56:54,772 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 13:56:54,772 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 13:56:54,772 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 13:56:54,772 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 13:56:54,773 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 13:57:10,950 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 14:05:27,212 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies where renewable energy investments led to economic downtuffs or failures'}
+2025-06-13 14:05:27,213 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies where renewable energy investments led to economic downtuffs or failures'
+2025-06-13 14:05:27,213 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:05:27,213 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:10:25,882 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'current data on renewable energy investment outcomes'}
+2025-06-13 14:10:25,882 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'current data on renewable energy investment outcomes'
+2025-06-13 14:10:25,882 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:10:25,882 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:15:18,811 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Latest IEA renewable energy capacity growth and Reuters cost reduction solar power analysis'}
+2025-06-13 14:15:18,811 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Latest IEA renewable energy capacity growth and Reuters cost reduction solar power analysis'
+2025-06-13 14:15:18,811 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:15:18,812 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:23:39,224 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'IEA renewable energy capacity growth data and Reuters solar power cost reduction reports'}
+2025-06-13 14:23:39,224 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'IEA renewable energy capacity growth data and Reuters solar power cost reduction reports'
+2025-06-13 14:23:39,224 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:23:39,224 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:32:15,351 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Renewable energy investment risks and past failures'}
+2025-06-13 14:32:15,351 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Renewable energy investment risks and past failures'
+2025-06-13 14:32:15,351 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:32:15,351 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:36:59,113 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest renewable energy investment trends and their impact on global sustainability'}
+2025-06-13 14:36:59,113 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest renewable energy investment trends and their impact on global sustainability'
+2025-06-13 14:36:59,113 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:36:59,113 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:44:42,717 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies of governments successfully investing in renewable energy with positive economic and social impacts'}
+2025-06-13 14:44:42,718 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies of governments successfully investing in renewable energy with positive economic and social impacts'
+2025-06-13 14:44:42,718 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:44:42,718 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 14:54:47,077 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'government investment in renewable energy examples and risks'}
+2025-06-13 14:54:47,077 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'government investment in renewable energy examples and risks'
+2025-06-13 14:54:47,077 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 14:54:47,077 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:07:14,430 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 15:07:14,430 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 15:07:15,062 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 15:07:15,062 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 15:07:15,062 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 15:07:15,063 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 15:07:15,064 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 15:07:32,859 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 15:16:29,590 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Examples of renewable energy projects that failed due to lack of proper planning or funding'}
+2025-06-13 15:16:29,590 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Examples of renewable energy projects that failed due to lack of proper planning or funding'
+2025-06-13 15:16:29,590 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:16:29,590 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:17:41,650 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies on renewable energy investments and their socio-economic impacts'}
+2025-06-13 15:17:41,650 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies on renewable energy investments and their socio-economic impacts'
+2025-06-13 15:17:41,650 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:17:41,651 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:27:46,908 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 15:27:46,909 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 15:27:47,472 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 15:27:47,472 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 15:27:47,473 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 15:27:47,473 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 15:27:47,474 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 15:28:02,479 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 15:36:33,657 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Examples of renewable energy projects that failed due to lack of proper planning or funding'}
+2025-06-13 15:36:33,657 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Examples of renewable energy projects that failed due to lack of proper planning or funding'
+2025-06-13 15:36:33,657 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:36:33,658 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:37:33,565 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies on renewable energy investments and their socio-economic impacts'}
+2025-06-13 15:37:33,566 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies on renewable energy investments and their socio-economic impacts'
+2025-06-13 15:37:33,566 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:37:33,566 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:43:36,680 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 15:43:36,681 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 15:43:37,238 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 15:43:37,238 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 15:43:37,238 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 15:43:37,238 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 15:43:37,239 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 15:43:52,179 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 15:52:49,983 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Examples of renewable energy projects that failed due to lack of proper planning or funding'}
+2025-06-13 15:52:49,983 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Examples of renewable energy projects that failed due to lack of proper planning or funding'
+2025-06-13 15:52:49,984 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:52:49,984 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:53:53,378 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies on renewable energy investments and their socio-economic impacts'}
+2025-06-13 15:53:53,378 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies on renewable energy investments and their socio-economic impacts'
+2025-06-13 15:53:53,378 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 15:53:53,378 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 15:54:50,224 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 15:54:50,224 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 15:54:50,785 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 15:54:50,786 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 15:54:50,786 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 15:54:50,786 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 15:54:50,786 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 15:55:05,595 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 16:03:37,284 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Examples of renewable energy projects that failed due to lack of proper planning or funding'}
+2025-06-13 16:03:37,284 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Examples of renewable energy projects that failed due to lack of proper planning or funding'
+2025-06-13 16:03:37,285 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:03:37,285 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 16:04:37,178 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies on renewable energy investments and their socio-economic impacts'}
+2025-06-13 16:04:37,179 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies on renewable energy investments and their socio-economic impacts'
+2025-06-13 16:04:37,179 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:04:37,179 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 16:18:37,126 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Case studies where renewable energy investments led to job displacement'}
+2025-06-13 16:18:37,126 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Case studies where renewable energy investments led to job displacement'
+2025-06-13 16:18:37,126 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:18:37,126 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 16:22:37,368 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples of justice theory applied to renewable energy investments'}
+2025-06-13 16:22:37,368 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples of justice theory applied to renewable energy investments'
+2025-06-13 16:22:37,368 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:22:37,369 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 16:34:04,015 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples where renewable energy investment has failed to meet justice theory standards'}
+2025-06-13 16:34:04,015 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples where renewable energy investment has failed to meet justice theory standards'
+2025-06-13 16:34:04,015 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:34:04,015 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 16:39:54,602 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'global equitable distribution of renewable energy benefits and job security implications'}
+2025-06-13 16:39:54,602 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'global equitable distribution of renewable energy benefits and job security implications'
+2025-06-13 16:39:54,602 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 16:39:54,603 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 19:39:55,726 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 19:39:55,727 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 19:39:58,134 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 19:39:58,134 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 19:39:58,134 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 19:39:58,134 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 19:39:58,135 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 19:43:58,805 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-13 19:43:58,806 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-13 19:43:59,362 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-13 19:43:59,362 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-13 19:43:59,362 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-13 19:43:59,362 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-13 19:43:59,363 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-13 19:44:15,165 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-13 19:55:16,197 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples of successful government investments in renewable energy with economic and social impact'}
+2025-06-13 19:55:16,197 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples of successful government investments in renewable energy with economic and social impact'
+2025-06-13 19:55:16,198 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 19:55:16,198 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-13 20:22:35,925 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent breakthroughs in renewable energy storage solutions'}
+2025-06-13 20:22:35,925 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent breakthroughs in renewable energy storage solutions'
+2025-06-13 20:22:35,925 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-13 20:22:35,926 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
