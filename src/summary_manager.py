@@ -103,14 +103,18 @@ Exchange #{exchange_num}:
             
             # Clean and store the summary
             summary = summary.strip()
-            self.detailed_summaries[exchange_num] = summary
-            logger.debug(f"Generated detailed summary for exchange {exchange_num}")
-            return summary
+            if summary and len(summary) > 10:  # Ensure we got a meaningful response
+                self.detailed_summaries[exchange_num] = summary
+                logger.debug(f"Generated detailed summary for exchange {exchange_num}")
+                return summary
+            else:
+                raise ValueError("Generated summary too short or empty")
             
         except Exception as e:
-            logger.error(f"Error generating detailed summary: {e}")
-            # Fallback to basic summary
-            fallback = f"Round {exchange_num}: {len(exchange_messages)} contributions from participants."
+            logger.error(f"Error generating detailed summary for exchange {exchange_num}: {e}")
+            # Create a more detailed fallback summary
+            participant_names = list(set(msg['name'] for msg in exchange_messages))
+            fallback = f"Exchange {exchange_num}: Discussion between {', '.join(participant_names)} with {len(exchange_messages)} total contributions. Key topics covered based on the exchange content."
             self.detailed_summaries[exchange_num] = fallback
             return fallback
     
@@ -189,11 +193,26 @@ Exchange #{exchange_num}:
         total_brief = sum(len(round_summaries) for round_summaries in self.brief_summaries.values())
         total_detailed = len(self.detailed_summaries)
         
-        return {
+        # Calculate additional stats if we have summaries
+        stats = {
             "brief_summaries": total_brief,
             "detailed_summaries": total_detailed,
-            "exchanges_covered": len(self.brief_summaries)
+            "exchanges_covered": max(len(self.brief_summaries), len(self.detailed_summaries))
         }
+        
+        # Add more detailed stats if available
+        if self.detailed_summaries:
+            total_words = 0
+            for summary in self.detailed_summaries.values():
+                if isinstance(summary, str):
+                    total_words += len(summary.split())
+            
+            stats.update({
+                "total_words": total_words,
+                "avg_summary_length": total_words // len(self.detailed_summaries) if self.detailed_summaries else 0
+            })
+        
+        return stats
     
     def get_detailed_summary(self) -> str:
         """Get a comprehensive detailed summary of all rounds.
@@ -216,12 +235,23 @@ Exchange #{exchange_num}:
         Args:
             conversation_history: Full conversation history
         """
-        # Find the latest exchange number
-        latest_exchange = 0
+        # Find all exchange numbers
+        exchanges = set()
         for msg in conversation_history:
-            if msg.get("exchange", 0) > latest_exchange:
-                latest_exchange = msg.get("exchange", 0)
+            if msg.get("exchange", 0) > 0:
+                exchanges.add(msg.get("exchange", 0))
         
-        # Generate detailed summary for the latest exchange if not exists
-        if latest_exchange > 0 and latest_exchange not in self.detailed_summaries:
-            self.generate_detailed_summary(latest_exchange, conversation_history)
+        # Generate detailed summaries for all exchanges that don't have them
+        for exchange_num in sorted(exchanges):
+            if exchange_num not in self.detailed_summaries:
+                try:
+                    self.generate_detailed_summary(exchange_num, conversation_history)
+                    logger.info(f"Generated summary for exchange {exchange_num}")
+                except Exception as e:
+                    logger.error(f"Failed to generate summary for exchange {exchange_num}: {e}")
+                    # Create a basic fallback summary
+                    exchange_messages = [
+                        msg for msg in conversation_history
+                        if msg.get("exchange") == exchange_num and msg.get("name") != "System"
+                    ]
+                    self.detailed_summaries[exchange_num] = f"Exchange {exchange_num}: {len(exchange_messages)} messages exchanged between participants."

@@ -153,12 +153,11 @@ class LocalLLM:
         
         tool_decision_messages.append({
             "role": "user",
-            "content": f"""This is just a checking message if you need a tool for your next response
-
+            "content": f"""This is just a decision-making step to determine if tools are needed.
 Available tools:
 {tool_list}
 You can use the following format to request a tool:
-RESPOND WITH ONLY JSON - NO OTHER TEXT:
+respond with the expected format - everything else will be ignored.
 
 {{"need_tool": true, "tool_name": "tool", "query": "search terms"}}
 OR
@@ -228,7 +227,6 @@ OR
             
             # Step 4: Generate final response with tool context
             print("💬 [FINAL RESPONSE] Generating response with tool results...")
-            print(enhanced_messages)
             return self.create_chat_completion(enhanced_messages)
             
         # Step 5: Generate response without tools

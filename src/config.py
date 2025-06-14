@@ -24,7 +24,8 @@ Debate Protocol:
 • Name and address agents when critiquing.
 • Critique/correct others' mistakes or gaps.
 • Use evidence, examples & logic.
-• Stay focused and avoid repetition.
+• Use paragraphs for clarity.
+• Be concise (~200–250 words, ±20); avoid fluff.
 • End with: <|end|>
 """
 

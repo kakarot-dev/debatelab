@@ -121,13 +121,28 @@ class DebateManager:
         # Natural conversation flow
         while total_exchanges < max_exchanges:
             try:
+                # Check if stop was requested via display adapter
+                if hasattr(self.display, 'stop_requested') and self.display.stop_requested:
+                    self.display.show_message("System", "Debate stopped by user request.", "white")
+                    break
+                
                 # Determine if this is the opening statement
                 is_starter = (total_exchanges == 0)
+                
+                # Show generating indicator if display supports it
+                if hasattr(self.display, 'show_generating_indicator'):
+                    self.display.show_generating_indicator(current_speaker.name)
                 
                 # Get response from current speaker
                 response = self._get_agent_response(current_speaker, is_starter)
                 if response:
                     self.display.show_message(current_speaker.name, response, current_speaker.personality["color"])
+                    
+                    # Check again after displaying message in case stop was requested
+                    if hasattr(self.display, 'stop_requested') and self.display.stop_requested:
+                        self.display.show_message("System", "Debate stopped by user request.", "white")
+                        break
+                    
                     self.conversation_history.append({
                         "name": current_speaker.name,
                         "content": response,
@@ -224,7 +239,6 @@ class DebateManager:
                 if participant_messages:
                     # Get detailed context from summary manager
                     detailed_context = self.get_summary_for_judge("detailed")
-                    print(detailed_context)
                     evaluation_prompt = get_final_evaluation_prompt(
                         self.topic, len(participant_messages), detailed_context
                     )

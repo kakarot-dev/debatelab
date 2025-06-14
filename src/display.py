@@ -1,8 +1,10 @@
 """Display utilities for formatting debate output in the CLI."""
 
 import time
+import os
 from typing import List
 from .config import COLORS, AGENT_PERSONALITIES
+import streamlit as st
 
 class DebateDisplay:
     """Handles the visual presentation of the debate in the CLI."""
@@ -64,19 +66,22 @@ class DebateDisplay:
         """
         color = COLORS.get(color_key, COLORS["white"])
         timestamp = time.strftime("%H:%M:%S")
-        
-        # Format the speaker name with color and timestamp
-        speaker_line = f"{COLORS['bold']}{color}[{timestamp}] {speaker}:{COLORS['reset']}"
-        print(speaker_line)
-        
-        if streaming:
-            self._stream_text(message, color, indent=2)
+        speaker_line = f"[{timestamp}] {speaker}:"
+        if os.environ.get("DEBATELAB_STREAMLIT") == "1":
+            st.markdown(f"**{speaker}**: {message}")
         else:
-            # Format and display the message with proper wrapping
-            formatted_message = self._wrap_text(message, indent=2)
-            print(f"{color}{formatted_message}{COLORS['reset']}")
-        
-        print()  # Add spacing between messages
+            # Format the speaker name with color and timestamp
+            speaker_line = f"{COLORS['bold']}{color}[{timestamp}] {speaker}:{COLORS['reset']}"
+            print(speaker_line)
+            
+            if streaming:
+                self._stream_text(message, color, indent=2)
+            else:
+                # Format and display the message with proper wrapping
+                formatted_message = self._wrap_text(message, indent=2)
+                print(f"{color}{formatted_message}{COLORS['reset']}")
+            
+            print()  # Add spacing between messages
     
     def _stream_text(self, text: str, color: str, indent: int = 0, delay: float = 0.03):
         """Display text with a streaming effect.

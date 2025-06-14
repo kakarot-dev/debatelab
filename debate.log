@@ -174,3 +174,214 @@
 2025-06-13 20:22:35,925 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent breakthroughs in renewable energy storage solutions'
 2025-06-13 20:22:35,925 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
 2025-06-13 20:22:35,926 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-14 16:01:20,341 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 16:01:20,342 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 16:01:22,981 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 16:01:22,981 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 16:01:22,981 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 16:01:22,981 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 16:01:22,986 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 16:11:12,088 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 16:11:12,089 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 16:11:12,630 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 16:11:12,630 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 16:11:12,630 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 16:11:12,630 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 16:11:12,631 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 16:16:47,703 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 16:16:47,704 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 16:16:48,293 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 16:16:48,293 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 16:16:48,293 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 16:16:48,294 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 16:16:48,295 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 16:47:12,887 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 16:47:12,888 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 16:47:13,478 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 16:47:13,478 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 16:47:13,478 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 16:47:13,478 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 16:47:13,480 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 16:49:10,833 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 16:49:10,834 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 16:49:11,400 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 16:49:11,400 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 16:49:11,400 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 16:49:11,400 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 16:49:11,401 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 16:57:03,932 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'historical examples where technology optimism led to unforeseen challenges in education'}
+2025-06-14 16:57:03,932 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'historical examples where technology optimism led to unforeseen challenges in education'
+2025-06-14 16:57:03,932 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-14 16:57:03,932 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-14 17:14:35,208 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples of AI failures in educational settings'}
+2025-06-14 17:14:35,208 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples of AI failures in educational settings'
+2025-06-14 17:14:35,208 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-14 17:14:35,209 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-14 17:24:11,859 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'success stories of AI in education'}
+2025-06-14 17:24:11,860 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'success stories of AI in education'
+2025-06-14 17:24:11,860 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-14 17:24:11,860 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-14 17:27:59,003 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Case studies where AI failed in educational settings'}
+2025-06-14 17:27:59,004 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Case studies where AI failed in educational settings'
+2025-06-14 17:27:59,004 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-14 17:27:59,004 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-14 17:33:08,670 - src.summary_manager - INFO - Generated summary for exchange 1
+2025-06-14 17:33:27,853 - src.summary_manager - ERROR - Error generating detailed summary for exchange 2: Generated summary too short or empty
+2025-06-14 17:33:27,854 - src.summary_manager - INFO - Generated summary for exchange 2
+2025-06-14 17:36:38,611 - src.summary_manager - INFO - Generated summary for exchange 3
+2025-06-14 17:40:06,761 - src.summary_manager - INFO - Generated summary for exchange 4
+2025-06-14 17:43:16,040 - src.summary_manager - INFO - Generated summary for exchange 5
+2025-06-14 17:46:24,178 - src.summary_manager - INFO - Generated summary for exchange 6
+2025-06-14 17:49:09,841 - src.summary_manager - INFO - Generated summary for exchange 7
+2025-06-14 17:52:14,939 - src.summary_manager - INFO - Generated summary for exchange 8
+2025-06-14 23:45:01,322 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 23:45:01,326 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 23:45:01,979 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 23:45:01,980 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 23:45:01,980 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 23:45:01,980 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 23:45:01,982 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 23:47:18,367 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 23:47:18,368 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 23:47:19,035 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 23:47:19,035 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 23:47:19,036 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 23:47:19,036 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 23:47:19,037 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 23:47:27,456 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-14 23:51:16,179 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 23:51:16,180 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 23:51:16,759 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 23:51:16,759 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 23:51:16,760 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 23:51:16,760 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 23:51:16,761 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 23:51:22,989 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-14 23:57:28,823 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-14 23:57:28,824 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-14 23:57:29,417 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-14 23:57:29,417 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-14 23:57:29,417 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-14 23:57:29,418 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-14 23:57:29,418 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-14 23:57:36,273 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:06:21,381 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:06:21,381 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:06:21,961 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:06:21,961 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:06:21,962 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:06:21,962 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:06:21,963 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:06:28,071 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:12:45,971 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:12:45,972 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:12:46,571 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:12:46,571 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:12:46,571 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:12:46,571 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:12:46,572 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:12:52,888 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:14:24,414 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:14:24,415 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:14:25,038 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:14:25,038 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:14:25,038 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:14:25,039 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:14:25,039 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:14:33,096 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:19:40,169 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:19:40,170 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:19:41,167 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:19:41,167 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:19:41,167 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:19:41,167 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:19:41,168 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:19:47,433 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:29:16,208 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:29:16,209 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:29:16,780 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:29:16,781 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:29:16,781 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:29:16,781 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:29:16,782 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:29:23,220 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:29:37,730 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:29:37,731 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:29:38,305 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:29:38,305 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:29:38,305 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:29:38,305 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:29:38,306 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:29:44,968 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:30:54,340 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:30:54,340 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:30:54,903 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:30:54,903 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:30:54,903 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:30:54,903 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:30:54,904 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:31:00,805 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:31:22,118 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:31:22,118 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:31:22,692 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:31:22,692 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:31:22,693 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:31:22,693 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:31:22,693 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:31:29,276 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:31:40,761 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:31:40,762 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:31:41,322 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:31:41,323 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:31:41,323 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:31:41,323 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:31:41,324 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:31:47,441 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:32:11,176 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:32:11,178 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:32:11,749 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:32:11,749 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:32:11,749 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:32:11,749 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:32:11,750 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:32:18,307 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:40:52,224 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Nuclear energy safety incidents and failures'}
+2025-06-15 00:40:52,224 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Nuclear energy safety incidents and failures'
+2025-06-15 00:40:52,224 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-15 00:40:52,224 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-15 00:42:49,813 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:42:49,814 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:42:50,456 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:42:50,456 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:42:50,456 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:42:50,456 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:42:50,457 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:42:57,439 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:51:22,181 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples of nuclear energy failures and safety concerns'}
+2025-06-15 00:51:22,181 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples of nuclear energy failures and safety concerns'
+2025-06-15 00:51:22,182 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-15 00:51:22,182 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-15 00:52:49,595 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:52:49,595 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:52:50,228 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:52:50,229 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:52:50,229 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:52:50,229 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:52:50,230 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:52:56,937 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:54:51,593 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:54:51,595 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:54:52,223 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:54:52,223 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:54:52,223 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:54:52,224 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:54:52,225 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:54:58,817 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 00:55:59,136 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 00:55:59,136 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 00:55:59,697 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 00:55:59,697 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 00:55:59,698 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 00:55:59,698 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 00:55:59,699 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 00:56:05,836 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
