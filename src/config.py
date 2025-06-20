@@ -8,13 +8,14 @@ MODEL_PATH = Path(__file__).parent.parent / "models" / "phi-3.gguf"
 MODEL_CONFIG = {
     "model_path": str(MODEL_PATH),
     "n_ctx": 2048,             # Max it out if you want agents to retain more context in memory
-    "n_threads": 16,            # Use number of physical cores or logical threads on your machine
+    # "n_threads": 16,            # Use number of physical cores or logical threads on your machine
     "temperature": 0.9,        # Slightly lower for more focused but still personality-rich responses
     "max_tokens": 700,        # Increased to allow for longer, more detailed responses
     "top_p": 0.9,              # Keep top-p relatively high for diverse output
     "top_k": 60,               # Slightly tighter control on sampling
     "repeat_penalty": 1.1,     # Slightly higher to avoid agents repeating themselves in debates
-    "verbose": False
+    "verbose": False,
+    "n_gpu_layers": 64
 }
 
 # Base prompt shared by all debate participants
@@ -26,7 +27,7 @@ Debate Protocol:
 • Use evidence, examples & logic.
 • Use paragraphs for clarity.
 • Be concise (~200–250 words, ±20); avoid fluff.
-• End with: <|end|>
+• Srictly end with: <|end|>
 """
 
 # Agent personalities and roles
@@ -64,7 +65,7 @@ AGENT_PERSONALITIES = {
 • Use ethical frameworks (justice theory, rights) to evaluate claims.
 • Reference historical or social examples when helpful.
 • Speak thoughtfully, clearly, and concisely.
-• Remain in-character; no meta-commentary.""",
+• Remain in-character; avoid fluff or repetition.""",
         "color": "magenta"
     },
     "judge": {

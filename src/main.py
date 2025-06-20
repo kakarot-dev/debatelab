@@ -671,11 +671,11 @@ def main():
     """Main entry point."""
     # Check if running in Streamlit
     try:
-        # This will only work if we're in a Streamlit context
-        st.session_state
-        launch_streamlit()
-        return 0
-    except:
+        import streamlit.runtime.scriptrunner as st_script
+        if st_script.get_script_run_ctx() is not None:
+            launch_streamlit()
+            return 0
+    except (ImportError, AttributeError):
         pass
     
     # CLI mode

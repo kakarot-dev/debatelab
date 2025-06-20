@@ -444,3 +444,308 @@
 2025-06-15 02:18:42,224 - src.summary_manager - INFO - Generated summary for exchange 1
 2025-06-15 02:21:20,117 - src.summary_manager - INFO - Generated summary for exchange 2
 2025-06-15 02:23:31,409 - src.summary_manager - INFO - Generated summary for exchange 3
+2025-06-15 20:34:00,858 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 20:34:00,863 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 20:34:08,458 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 20:34:08,458 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 20:34:08,459 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 20:34:08,459 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 20:34:08,462 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 20:34:24,473 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 20:37:49,168 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 20:37:49,170 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 23:43:29,899 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 23:43:29,910 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 23:43:32,301 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 23:43:32,302 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 23:43:32,302 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 23:43:32,302 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 23:43:32,303 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 23:43:38,277 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 23:47:36,753 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 23:47:36,753 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 23:47:37,283 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 23:47:37,284 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 23:47:37,284 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 23:47:37,284 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 23:47:37,285 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 23:47:52,056 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 23:51:50,724 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 23:51:50,725 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 23:51:51,266 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 23:51:51,266 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 23:51:51,266 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 23:51:51,266 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 23:51:51,267 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 23:52:05,968 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-15 23:56:14,651 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-15 23:56:14,651 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-15 23:56:15,122 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-15 23:56:15,122 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-15 23:56:15,122 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-15 23:56:15,123 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-15 23:56:15,123 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-15 23:56:29,997 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 00:01:06,203 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-16 00:01:06,204 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-16 00:01:06,719 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-16 00:01:06,719 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-16 00:01:06,719 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-16 00:01:06,719 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-16 00:01:06,720 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-16 00:01:20,871 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 00:09:53,046 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-16 00:09:53,047 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-16 00:09:53,651 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-16 00:09:53,651 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-16 00:09:53,651 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-16 00:09:53,651 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-16 00:09:53,652 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-16 00:10:10,712 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 00:13:14,049 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'current impacts of AI on job markets'}
+2025-06-16 00:13:14,049 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'current impacts of AI on job markets'
+2025-06-16 00:13:14,049 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 00:13:14,049 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-16 00:15:59,599 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-16 00:15:59,599 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-16 00:16:00,145 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-16 00:16:00,145 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-16 00:16:00,145 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-16 00:16:00,145 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-16 00:16:00,146 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-16 00:16:14,826 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 00:19:08,519 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-16 00:19:08,519 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-16 00:19:09,024 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-16 00:19:09,024 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-16 00:19:09,025 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-16 00:19:09,025 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-16 00:19:09,026 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-16 00:19:23,720 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 00:27:13,555 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent nuclear energy accidents and their impact on public perception'}
+2025-06-16 00:27:13,556 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent nuclear energy accidents and their impact on public perception'
+2025-06-16 00:27:13,556 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 00:27:13,556 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-16 00:33:43,166 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in Gen IV nuclear reactors and safety protocols'}
+2025-06-16 00:33:43,166 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in Gen IV nuclear reactors and safety protocols'
+2025-06-16 00:33:43,166 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 00:33:43,166 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-16 23:27:15,101 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-16 23:27:15,103 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-16 23:27:17,802 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-16 23:27:17,803 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-16 23:27:17,803 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-16 23:27:17,803 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-16 23:27:17,804 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-16 23:27:23,899 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-16 23:28:14,985 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent advancements and efficiency of nuclear power compared to renewable energy sources'}
+2025-06-16 23:28:14,985 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent advancements and efficiency of nuclear power compared to renewable energy sources'
+2025-06-16 23:28:14,985 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 23:28:14,985 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-16 23:35:07,787 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'historical failures of nuclear power plants and their impact on green energy debate'}
+2025-06-16 23:35:07,787 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'historical failures of nuclear power plants and their impact on green energy debate'
+2025-06-16 23:35:07,787 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 23:35:07,787 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-16 23:53:19,180 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent failures and risks associated with nuclear power plants'}
+2025-06-16 23:53:19,180 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent failures and risks associated with nuclear power plants'
+2025-06-16 23:53:19,180 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-16 23:53:19,180 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-17 00:09:03,853 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies on nuclear power failure or setbacks'}
+2025-06-17 00:09:03,854 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies on nuclear power failure or setbacks'
+2025-06-17 00:09:03,854 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-17 00:09:03,854 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-17 00:14:24,977 - src.summary_manager - INFO - Generated summary for exchange 1
+2025-06-17 00:18:10,159 - src.summary_manager - INFO - Generated summary for exchange 2
+2025-06-17 00:21:24,826 - src.summary_manager - INFO - Generated summary for exchange 3
+2025-06-17 00:22:52,909 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in energy storage for renewables'}
+2025-06-17 00:22:52,909 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in energy storage for renewables'
+2025-06-17 00:22:52,909 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-17 00:22:52,909 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 11:59:41,884 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-18 11:59:41,886 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-18 11:59:43,384 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-18 11:59:43,384 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-18 11:59:43,384 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-18 11:59:43,384 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-18 11:59:43,385 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-18 12:00:01,436 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-18 12:01:29,844 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-18 12:01:29,845 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-18 12:01:30,421 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-18 12:01:30,421 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-18 12:01:30,421 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-18 12:01:30,421 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-18 12:01:30,422 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-18 12:01:46,639 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-18 12:04:14,774 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-18 12:04:14,774 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-18 12:04:15,301 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-18 12:04:15,301 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-18 12:04:15,301 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-18 12:04:15,301 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-18 12:04:15,302 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-18 12:04:29,822 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-18 12:08:32,248 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent nuclear energy accidents and their impact on public perception'}
+2025-06-18 12:08:32,248 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent nuclear energy accidents and their impact on public perception'
+2025-06-18 12:08:32,248 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:08:32,248 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:11:39,315 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in Gen IV nuclear reactors and safety protocols'}
+2025-06-18 12:11:39,316 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in Gen IV nuclear reactors and safety protocols'
+2025-06-18 12:11:39,316 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:11:39,316 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:15:39,109 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Latest advancements in Gen IV nuclear reactors and their projected impact on carbon emissions.'}
+2025-06-18 12:15:39,109 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Latest advancements in Gen IV nuclear reactors and their projected impact on carbon emissions.'
+2025-06-18 12:15:39,109 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:15:39,110 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:17:39,714 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in Gen IV nuclear reactors and their impact on carbon emissions'}
+2025-06-18 12:17:39,715 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in Gen IV nuclear reactors and their impact on carbon emissions'
+2025-06-18 12:17:39,715 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:17:39,715 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:19:58,550 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Case studies of nuclear energy failures and their impact on climate change discourse'}
+2025-06-18 12:19:58,550 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Case studies of nuclear energy failures and their impact on climate change discourse'
+2025-06-18 12:19:58,551 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:19:58,551 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:25:24,550 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Latest IPCC report on nuclear energy and climate change'}
+2025-06-18 12:25:24,550 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Latest IPCC report on nuclear energy and climate change'
+2025-06-18 12:25:24,551 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:25:24,551 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:27:50,096 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'historical examples where nuclear energy projects failed or had severe consequences'}
+2025-06-18 12:27:50,096 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'historical examples where nuclear energy projects failed or had severe consequences'
+2025-06-18 12:27:50,096 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:27:50,096 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-18 12:34:52,803 - src.summary_manager - INFO - Generated summary for exchange 1
+2025-06-18 12:36:38,013 - src.summary_manager - INFO - Generated summary for exchange 2
+2025-06-18 12:37:43,684 - src.summary_manager - INFO - Generated summary for exchange 3
+2025-06-18 12:39:00,572 - src.summary_manager - INFO - Generated summary for exchange 8
+2025-06-18 12:44:34,394 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': "latest data on global energy mix and nuclear power's contribution in 2023"}
+2025-06-18 12:44:34,394 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest data on global energy mix and nuclear power's contribution in 2023'
+2025-06-18 12:44:34,394 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-18 12:44:34,394 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-20 19:56:11,105 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 19:56:11,105 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 19:56:13,961 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 19:56:13,962 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 19:56:13,962 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 19:56:13,962 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 19:56:13,963 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 19:56:20,716 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 19:58:31,777 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 19:58:31,777 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 19:58:32,345 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 19:58:32,345 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 19:58:32,345 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 19:58:32,345 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 19:58:32,346 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 19:58:47,046 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 20:02:37,217 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent incidents involving nuclear energy and climate change debate'}
+2025-06-20 20:02:37,218 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent incidents involving nuclear energy and climate change debate'
+2025-06-20 20:02:37,218 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-20 20:02:37,218 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-20 23:28:58,890 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:28:58,891 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:29:02,242 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:29:02,243 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:29:02,243 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:29:02,243 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:29:02,247 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:29:35,452 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 23:44:20,580 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:44:20,591 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:44:24,498 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:44:24,498 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:44:24,498 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:44:24,499 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:44:24,500 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:44:35,517 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 23:46:17,455 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:46:17,455 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:46:18,622 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:46:18,622 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:46:18,622 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:46:18,622 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:46:18,623 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:46:28,814 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 23:48:34,407 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Nuclear energy accident history and associated risks'}
+2025-06-20 23:48:34,407 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Nuclear energy accident history and associated risks'
+2025-06-20 23:48:34,407 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-20 23:48:34,408 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-20 23:53:27,705 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in nuclear waste disposal methods'}
+2025-06-20 23:53:27,705 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in nuclear waste disposal methods'
+2025-06-20 23:53:27,705 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-20 23:53:27,705 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-20 23:54:45,965 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:54:45,965 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:54:51,004 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:54:51,005 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:54:51,005 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:54:51,005 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:54:51,005 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:55:01,437 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 23:56:36,789 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'examples of nuclear energy failures and risks'}
+2025-06-20 23:56:36,789 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'examples of nuclear energy failures and risks'
+2025-06-20 23:56:36,790 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-20 23:56:36,790 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-20 23:56:55,179 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:56:55,179 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:56:56,339 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:56:56,339 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:56:56,339 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:56:56,340 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:56:56,340 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:57:06,730 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-20 23:58:26,345 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-20 23:58:26,345 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-20 23:58:27,755 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-20 23:58:27,755 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-20 23:58:27,755 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-20 23:58:27,756 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-20 23:58:27,757 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-20 23:58:38,212 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-21 00:00:05,965 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-21 00:00:05,966 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-21 00:00:07,523 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-21 00:00:07,523 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-21 00:00:07,523 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-21 00:00:07,523 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-21 00:00:07,524 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-21 00:00:17,952 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-21 00:01:55,452 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-21 00:01:55,452 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-21 00:01:56,842 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-21 00:01:56,843 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-21 00:01:56,843 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-21 00:01:56,843 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-21 00:01:56,845 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-21 00:02:07,230 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-21 00:04:02,497 - src.debate_manager - INFO - Setting up debate agents...
+2025-06-21 00:04:02,497 - src.llm_wrapper - INFO - Loading model from /home/axel/projects/debatelab/models/phi-3.gguf
+2025-06-21 00:04:03,751 - src.llm_wrapper - INFO - Model loaded successfully
+2025-06-21 00:04:03,751 - src.tools.tool_manager - INFO - Registered tool: test_tool
+2025-06-21 00:04:03,751 - src.tools.tool_manager - INFO - Registered tool: web_search
+2025-06-21 00:04:03,751 - src.agents - INFO - Initialized tools for agents: test_tool, web_search
+2025-06-21 00:04:03,752 - src.debate_manager - INFO - Created 3 debate agents, 1 interactive judge and 1 moderator
+2025-06-21 00:04:14,260 - src.debate_manager - INFO - Selected Alex the Optimist to start the debate
+2025-06-21 00:05:57,542 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies where nuclear power has failed to provide long-term solutions for climate change and energy sustainability'}
+2025-06-21 00:05:57,542 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies where nuclear power has failed to provide long-term solutions for climate change and energy sustainability'
+2025-06-21 00:05:57,542 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-21 00:05:57,543 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-21 00:12:43,692 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'historical examples where nuclear energy had unintended consequences.'}
+2025-06-21 00:12:43,692 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'historical examples where nuclear energy had unintended consequences.'
+2025-06-21 00:12:43,692 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-21 00:12:43,692 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-21 00:16:27,732 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'Recent advancements in nuclear safety and waste management technology'}
+2025-06-21 00:16:27,732 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'Recent advancements in nuclear safety and waste management technology'
+2025-06-21 00:16:27,732 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-21 00:16:27,733 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-21 00:18:55,072 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'case studies nuclear energy failure and solar power successes'}
+2025-06-21 00:18:55,073 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'case studies nuclear energy failure and solar power successes'
+2025-06-21 00:18:55,073 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-21 00:18:55,073 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results
+2025-06-21 00:19:56,998 - src.summary_manager - INFO - Generated summary for exchange 1
+2025-06-21 00:20:38,887 - src.summary_manager - INFO - Generated summary for exchange 2
+2025-06-21 00:20:41,563 - src.summary_manager - ERROR - Error generating detailed summary for exchange 3: Generated summary too short or empty
+2025-06-21 00:20:41,563 - src.summary_manager - INFO - Generated summary for exchange 3
+2025-06-21 00:22:13,400 - src.tools.base_tool.web_search - INFO - Executing tool 'web_search' with params: {'query': 'latest advancements in renewable energy and nuclear safety measures.'}
+2025-06-21 00:22:13,400 - src.tools.base_tool.web_search - INFO - 🔍 Performing web search for: 'latest advancements in renewable energy and nuclear safety measures.'
+2025-06-21 00:22:13,400 - src.tools.base_tool.web_search - INFO - ✅ Web search completed, found 5 relevant results
+2025-06-21 00:22:13,400 - src.tools.base_tool.web_search - INFO - Tool 'web_search' returned 7 results

@@ -223,3 +223,6 @@ TOOL_CONFIG = {
 4. **Phase 4**: Testing and refinement
 
 This framework provides a solid foundation for extending your debate system with function calling capabilities while maintaining the existing architecture and allowing for easy future expansion.
+
+
+set CMAKE_ARGS="-DLLAMA_CUBLAS=on" && set FORCE_CMAKE=1 && pip install --no-cache-dir llama-cpp-python==0.2.90 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu123

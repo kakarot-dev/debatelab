@@ -27,8 +27,9 @@ class LocalLLM:
             self.llm = Llama(
                 model_path=self.config["model_path"],
                 n_ctx=self.config["n_ctx"],
-                n_threads=self.config["n_threads"],
-                verbose=self.config["verbose"]
+                # n_threads=self.config["n_threads"],
+                verbose=self.config["verbose"],
+                n_gpu_layers=self.config["n_gpu_layers"],
             )
             logger.info("Model loaded successfully")
         except Exception as e:
@@ -66,8 +67,9 @@ class LocalLLM:
             # Clean up any system artifacts or unwanted text
             # Only include patterns that are clearly meta-commentary or system artifacts
             unwanted_patterns = [
-                "<|system|>", "<|human|>", "<|assistant|>", "<|user|>", "<|end|>",
+                "<|system|>", "<|human|>", "<|assistant|>", "<|user|>", "<|end|>", "<|im_sep|>",
                 "System:", "Human:", "Assistant:", "User:",
+                "<|user|", ">", "<|assistant|", ">", "<|system|", ">",
                 "Agent Response:", "Agents Response:", "Agent's Response:",
                 "The agent responds:", "The character says:",
                 "Here is the response:", "Here's the response:",
@@ -153,17 +155,17 @@ class LocalLLM:
         
         tool_decision_messages.append({
             "role": "user",
-            "content": f"""This is just a decision-making step to determine if tools are needed.
-Available tools:
+            "content": f"""Ignore previous instructions.
+Read the available context above and decide whether a tool is needed to continue the debate.
+**Available tools:**
 {tool_list}
-You can use the following format to request a tool:
-respond with the expected format - everything else will be ignored.
+RESPOND WITH THE FOLLOWING FORMAT.
 
 {{"need_tool": true, "tool_name": "tool", "query": "search terms"}}
 OR
-{{"need_tool": false}}"""
+{{'need_tool': false}}"""
         })
-        
+        print(tool_decision_messages)
         print("🤔 [TOOL DECISION] Asking LLM if it needs tools...")
         tool_decision = self.create_chat_completion(tool_decision_messages, stop=["response", "Solution"])
         print(tool_decision)
